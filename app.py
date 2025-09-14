@@ -12,10 +12,7 @@ st.set_page_config(
 )
 
 # ---- Load Model ----
-import os
-model_path = os.path.join(os.getcwd(), "models", "xgb_model.pkl")
-model_data = joblib.load(model_path)
-# model_data = joblib.load("models/xgb_model.pkl")
+model_data = joblib.load("models/xgb_model.pkl")
 model = model_data["model"]
 feature_names = model_data["features"]
 
