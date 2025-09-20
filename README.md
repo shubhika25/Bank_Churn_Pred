@@ -2,7 +2,10 @@
 
 Predict customer churn for a retail bank. This is a  machine learning project with an interactive Streamlit frontend.
 
-<img width="537" height="780" alt="image" src="https://github.com/user-attachments/assets/a9519bc4-9b70-4764-b6ea-d16d320ac791" />
+<img width="719" height="705" alt="image" src="https://github.com/user-attachments/assets/75b33207-8c2b-4e8d-90ca-13c60bf374b6" />
+
+<img width="803" height="492" alt="image" src="https://github.com/user-attachments/assets/7d91879b-f826-4ad0-96cc-ee488557d1a5" />
+
 
 ## 📌Overview
 
