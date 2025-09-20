@@ -1,6 +1,6 @@
 # Bank Churn Prediction
 
-Predict customer churn for a retail bank using demographic and transactional features. This is a full-stack machine learning project with an interactive Streamlit frontend and deployment-ready backend.
+Predict customer churn for a retail bank. This is a  machine learning project with an interactive Streamlit frontend.
 
 <img width="537" height="780" alt="image" src="https://github.com/user-attachments/assets/a9519bc4-9b70-4764-b6ea-d16d320ac791" />
 
