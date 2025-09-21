@@ -4,7 +4,8 @@ Predict customer churn for a retail bank. This is a  machine learning project wi
 
 <img width="719" height="705" alt="image" src="https://github.com/user-attachments/assets/75b33207-8c2b-4e8d-90ca-13c60bf374b6" />
 
-<img width="803" height="492" alt="image" src="https://github.com/user-attachments/assets/7d91879b-f826-4ad0-96cc-ee488557d1a5" />
+<img width="1003" height="329" alt="image" src="https://github.com/user-attachments/assets/a80249cc-9283-4550-8267-51d889e322a2" />
+
 
 
 ## 📌Overview
