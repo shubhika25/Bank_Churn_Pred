@@ -2,9 +2,7 @@
 
 Predict customer churn for a retail bank. This is a  machine learning project with an interactive Streamlit frontend.
 
-<img width="719" height="705" alt="image" src="https://github.com/user-attachments/assets/75b33207-8c2b-4e8d-90ca-13c60bf374b6" />
-
-<img width="1003" height="329" alt="image" src="https://github.com/user-attachments/assets/a80249cc-9283-4550-8267-51d889e322a2" />
+<img width="907" height="783" alt="image" src="https://github.com/user-attachments/assets/4e6e1233-1126-4ab9-9cac-39183856eec4" />
 
 
 
@@ -40,9 +38,9 @@ Git for version control
 
 Approach:
 
-Train-test split and cross-validation for robust performance estimation.
+**Train-test split and cross-validation for robust performance estimation.
 
-Hyperparameter tuning with GridSearchCV for optimized results.
+Hyperparameter tuning with GridSearchCV for optimized results.**
 
 Evaluated six algorithms for accuracy, precision, recall, F1, and ROC-AUC.
 
