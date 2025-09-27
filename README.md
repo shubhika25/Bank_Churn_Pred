@@ -2,11 +2,7 @@
 
 Predict customer churn for a retail bank. This is a  machine learning project with an interactive Streamlit frontend.
 
-<img width="495" height="627" alt="image" src="https://github.com/user-attachments/assets/25ee1fef-13c1-4173-a300-d79c2c92dda4" />
-<img width="907" height="783" alt="image" src="https://github.com/user-attachments/assets/4e6e1233-1126-4ab9-9cac-39183856eec4" />
-
-
-
+<img width="570" height="862" alt="image" src="https://github.com/user-attachments/assets/44b176d5-5e5b-49cc-ad74-a5f03c3ec507" />
 ## 📌Overview
 
 The goal of this project is to build a classification model that can identify customers likely to churn, enabling the bank to take proactive retention measures. The application includes:
