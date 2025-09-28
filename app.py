@@ -2,7 +2,6 @@ import streamlit as st
 import numpy as np
 import joblib
 import plotly.graph_objects as go
-import math
 
 # ---- Page Configuration ----
 st.set_page_config(
@@ -25,7 +24,7 @@ st.markdown("## 📊 Customer Churn Prediction with Cost Analysis")
 st.write("Enter customer details below to predict churn probability and estimated cost impact.")
 
 # ---- Decision Threshold ----
-threshold = st.slider("🔧 Decision Threshold", 0.1, 0.9, 0.5, 0.01)
+threshold = 0.5
 
 # ---- Input Form ----
 st.subheader("👤 Customer Information")
@@ -81,48 +80,37 @@ if st.button("🔮 Predict Churn & Cost"):
 
         st.info(f"💰 **Estimated Cost Impact:** ₹{estimated_cost:,.0f}")
 
-        # ---- Gauge Chart ----
-        sectors = ["Low", "Medium", "High", "Extreme"]
-        colors = ["green", "blue", "yellow", "red"]
-        values = [0.25, 0.25, 0.25, 0.25]
-
-        fig = go.Figure(go.Pie(
-            values=values + [1],
-            rotation=90,
-            hole=0.5,
-            marker_colors=colors + ["white"],
-            text=sectors + [""],
-            textinfo="text",
-            showlegend=False
+        # ---- Gauge Chart (Speedometer Style) ----
+        fig = go.Figure(go.Indicator(
+            mode="gauge+number",
+            value=probability * 100,
+            number={"suffix": "%"},
+            title={"text": "Churn Probability"},
+            gauge={
+                "axis": {"range": [0, 100]},
+                "bar": {"color": "black", "thickness": 0.3},
+                "steps": [
+                    {"range": [0, 25], "color": "green"},
+                    {"range": [25, 50], "color": "blue"},
+                    {"range": [50, 75], "color": "yellow"},
+                    {"range": [75, 100], "color": "red"},
+                ],
+                "threshold": {
+                    "line": {"color": "black", "width": 4},
+                    "thickness": 0.75,
+                    "value": probability * 100
+                }
+            },
+            domain={"x": [0, 1], "y": [0, 1]}
         ))
-
-        theta = 180 * probability
-        radians = math.radians(180 - theta)
-        needle_length = 0.2
-        x_center, y_center = 0.5, 0.5
-        x_head = x_center + needle_length * math.cos(radians)
-        y_head = y_center + needle_length * math.sin(radians)
-
-        fig.add_shape(
-            type="line",
-            x0=x_center, y0=y_center,
-            x1=x_head, y1=y_head,
-            line=dict(color="black", width=4)
-        )
 
         fig.update_layout(
             margin=dict(l=20, r=20, t=50, b=20),
-            showlegend=False,
-            height=400,
-            annotations=[dict(
-                x=0.5, y=0.05,
-                text=f"Prob: {probability:.2%}",
-                showarrow=False,
-                font=dict(size=20)
-            )]
+            height=250
         )
 
         st.plotly_chart(fig, use_container_width=True)
+
 with st.expander("ℹ️ Learn about Cost Impact"):
     st.write(
         """
@@ -134,4 +122,4 @@ with st.expander("ℹ️ Learn about Cost Impact"):
     )
 
 st.markdown("---")
-st.caption("💡 Adjust threshold to balance false positives/negatives and cost impact.")
+
